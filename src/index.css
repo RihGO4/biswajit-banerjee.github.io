@@ -36,18 +36,19 @@ body {
   animation-delay: 4s;
 }
 
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
 @keyframes float {
   from { transform: translateY(0) rotate(0deg); }
   to { transform: translateY(-100vh) rotate(360deg); }
 }
 
-.dark {
-  --tw-bg-opacity: 1;
-  background-color: rgba(15, 23, 42, var(--tw-bg-opacity));
-  color: white;
-}
-
-.dark .project-card {
-  background-color: rgba(30, 41, 59, 1);
-  border-color: rgba(55, 65, 81, 1);
+/* Dark mode transitions */
+.dark-transition {
+  transition: background-color 0.3s ease-in-out,
+              color 0.3s ease-in-out,
+              border-color 0.3s ease-in-out;
 }
